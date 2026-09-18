@@ -1,6 +1,7 @@
 /*
     Lecture note example - Input!!
 */
+    import java.util.Scanner;
 
 class LectureInput{
     public static void main(String args[]) {
@@ -36,8 +37,14 @@ class LectureInput{
         double item1Total = item1Price * item1Quantity;
         double item2Total = item2Price * item2Quantity;
         double item3Total = item3Price * item3Quantity;
-        System.out.println("Total is:" + (item1Total + item2Total + item3Total));
+        double grandTotal = item1Total + item2Total + item3Total;
+        System.out.println("Total is:" + grandTotal);
 
+        System.out.println("How much would you like to tip?");
+        double tip = sc.nextDouble(); 
+        tip = (tip/100) * grandTotal; 
+        
+        System.out.println("Tip and total is: " + (tip+grandTotal)); 
 
 	}
 }
