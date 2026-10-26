@@ -13,25 +13,22 @@ class starter {
 		int randomnum = (int)(Math.random()*1000 + 1);
 
 		System.out.println("Welcome to the guessing game!");
+		int guess = 0;
+
+		while(guess != randomnum){
 		System.out.print("Please guess a number: ");
-		int guess = sc.nextInt();
-
-		if(guess == randomnum){
-			System.out.println("You got the number!");
-		}
-		else if(guess < randomnum || guessagain < randomnum){
-			System.out.println("The number is higher.");
-			System.out.print("Please guess a number: ");
-			int guessagain = sc.nextInt();
-		}
-		else if(guess > randomnum || guessagain > randomnum){
-			System.out.println("The number is lower.");
-			System.out.print("Please guess a number: ");
-			int guessagain = sc.nextInt(); 
-		}
-
-
-
+		guess = sc.nextInt();	
 		
+			if(guess < randomnum){
+			System.out.println("The number is higher.");		
+			}
+			else if(guess > randomnum){
+			System.out.println("The number is lower."); 
+			}
+			else{
+			System.out.println("Congratulations! You got the number!");
+			}
+
+		}
 	}
 }
